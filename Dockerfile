@@ -47,6 +47,7 @@ RUN conda install pandas
 RUN /opt/miniconda/bin/pip install udacity-pa
 COPY notebook /usr/local/bin
 RUN conda install bokeh
+RUN conda install scikit-learn
 
 WORKDIR /workdir
 CMD /bin/bash
