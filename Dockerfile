@@ -48,7 +48,7 @@ RUN /opt/miniconda/bin/pip install udacity-pa
 COPY notebook /usr/local/bin
 RUN conda install bokeh
 RUN conda install scikit-learn
-RUN conda install pytorch-gpu
+RUN conda install pytorch-gpu torchvision
 
 WORKDIR /workdir
 CMD /bin/bash
