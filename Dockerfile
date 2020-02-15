@@ -39,7 +39,8 @@ RUN ./Miniconda3-4.7.12.1-Linux-x86_64.sh -b -p /opt/miniconda
 RUN ln -s /opt/miniconda/bin/conda /usr/local/bin/conda
 RUN su - user -c "conda init bash"
 RUN conda install jupyter notebook
-RUN conda install scipy pillow
+RUN conda install scipy
+RUN conda install pillow==6.2.1
 RUN conda install tensorflow-gpu==1.15.0
 RUN conda install -c conda-forge moviepy imageio-ffmpeg
 RUN conda install matplotlib
