@@ -10,7 +10,7 @@ GRAPHICS_OPTS="\
 NVIDIA_OPTS="\
     --env NVIDIA_VISIBLE_DEVICES=all \
     --env NVIDIA_DRIVER_CAPABILITIES=compute,graphics,utility \
-    --runtime=nvidia \
+    --gpus all \
 "
 
 run_container() {
