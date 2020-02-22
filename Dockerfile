@@ -46,10 +46,10 @@ RUN conda install -c conda-forge moviepy imageio-ffmpeg
 RUN conda install matplotlib
 RUN conda install pandas
 RUN /opt/miniconda/bin/pip install udacity-pa
-COPY notebook /usr/local/bin
 RUN conda install bokeh
 RUN conda install scikit-learn
 RUN conda install pytorch-gpu torchvision
+COPY notebook /usr/local/bin
 
 WORKDIR /workdir
 CMD /bin/bash
