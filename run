@@ -15,6 +15,7 @@ NVIDIA_OPTS="\
 
 run_container() {
     docker run \
+        --env WANDB_API_KEY \
         --interactive \
         --name ${CONTAINER_NAME} \
         --publish 8888:8888 \
