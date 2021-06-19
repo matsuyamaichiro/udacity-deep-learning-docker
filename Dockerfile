@@ -53,5 +53,13 @@ RUN apt-get update && apt-get install -y gcc
 RUN /opt/miniconda/bin/pip install wandb
 COPY notebook /usr/local/bin
 
+# Open CV
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y libgl1-mesa-dev
+RUN conda install -c conda-forge opencv
+
+# Efficient Net
+RUN conda install -c conda-forge efficientnet-pytorch
+
 WORKDIR /workdir
 CMD /bin/bash
